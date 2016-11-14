@@ -4,15 +4,21 @@ function gMTL(fn,ln,dn){
 
 function renderHeader(){
 	var h =
-	"<header class=\"sticky\"><h1><script type=\"text/javascript\">"+
+	"<header class=\"sticky\"><h1>" +
 	"<ul class=\"nav\">" +
 	"<li><a class=\"navlink\" href=\"/\">Home</a></li>" +
 	"<li><a class=\"navlink\" href=\"/about/\">About</a></li>" +
 	"<li><a class=\"navlink\" href=\"/results/\">Results</a></li>" +
 	"<li><a class=\"navlink\" href=\"/services/\">Services</a></li>" +
 	"<li><a class=\"navlink\" href=\"/learning/\">Learning</a></li>" +
-	"</ul></script></h1></header>";
+	"</ul></h1></header>";
 	document.write(h);
+}
+
+
+
+function gMTL(fn,ln,dn){
+	return("mail" + "to:" + fn +"." + ln + "@" + dn + ".com");
 }
 
 function renderFooter(){
