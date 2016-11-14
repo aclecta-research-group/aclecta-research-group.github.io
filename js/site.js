@@ -1,54 +1,34 @@
-(function(){
+function gMTL(fn,ln,dn){
+	return("mail" + "to:" + fn +"." + ln + "@" + dn + ".com");
+}
 
-	var button = document.getElementById('cn-button'),
-	wrapper = document.getElementById('cn-wrapper'),
-	overlay = document.getElementById('cn-overlay');
+function renderHeader(){
+	var h =
+	"<header class=\"sticky\"><h1><script type=\"text/javascript\">"+
+	"<ul class=\"nav\">" +
+	"<li><a class=\"navlink\" href=\"/\">Home</a></li>" +
+	"<li><a class=\"navlink\" href=\"/about/\">About</a></li>" +
+	"<li><a class=\"navlink\" href=\"/results/\">Results</a></li>" +
+	"<li><a class=\"navlink\" href=\"/services/\">Services</a></li>" +
+	"<li><a class=\"navlink\" href=\"/learning/\">Learning</a></li>" +
+	"</ul></script></h1></header>";
+	document.write(h);
+}
 
-	//open and close menu when the button is clicked
-	var open = false;
-	button.addEventListener('click', handler, false);
-	wrapper.addEventListener('click', cnhandle, false);
+function renderFooter(){
+	var f = "<div class=\"component\">"+
+	"<button class=\"cn-button\" id=\"cn-button\">+</button>"+
+	"<div class=\"cn-wrapper\" id=\"cn-wrapper\">"+
+	"<ul>"+
+	"<li><a href=\"https://www.linkedin.com/in/parrottsquawk\" target=\"_blank\"><span class=\"socicon-linkedin\" style=\"color:#3371b7;\"></span></a></li>"+
+	"<li><a href=\"https://twitter.com/parrottsquawk\" target=\"_blank\"><span class=\"socicon-twitter\" style=\"color:#4da7de;\"></span></a></li>"+
+	"<li><a href=\"javascript:window.location=this.gMTL('chet','parrott','aclecta')\" target=\"_blank\"><span class=\"socicon-mail\" style=\"color:#0079B7;\"></span></a></li>"+
+	"<li><a href=\"https://github.com/parrottsquawk\"><span class=\"socicon-github\" style=\"color:#221e1b;\" target=\"_blank\"></span></a></li>"+
+	"<li><a href=\"http://stackoverflow.com/users/2783893/parrottsquawk\"><span class=\"socicon-stackoverflow\" style=\"color:#FD9827;\" target=\"_blank\"></span></a></li>"+
+	"</ul>"+
+	"</div>"+
+	"<div id=\"cn-overlay\" class=\"cn-overlay\"></div>"
+	"</div>"
+	document.write(f);
 
-	function cnhandle(e){
-		e.stopPropagation();
-	}
-
-	function handler(e){
-		if (!e) var e = window.event;
-	 	e.stopPropagation();//so that it doesn't trigger click event on document
-
-	 	if(!open){
-	 		openNav();
-	 	}
-	 	else{
-	 		closeNav();
-	 	}
-	 }
-	 function openNav(){
-	 	open = true;
-	 	button.innerHTML = "▼";
-	 	classie.add(wrapper, 'opened-nav');
-	 }
-	 function closeNav(){
-	 	open = false;
-	 	button.innerHTML = "▲";
-	 	classie.remove(wrapper, 'opened-nav');
-	 }
-	 document.addEventListener('click', closeNav);
-
-	})();
-
-	function gMTL(fn,ln,dn){
-		return("mail" + "to:" + fn +"." + ln + "@" + dn + ".com");
-	}
-	function renderHeader(){
-		var h ="<ul class=\"nav\">" +
-		"<li><a class=\"navlink\" href=\"/\">Home</a></li>" +
-		"<li><a class=\"navlink\" href=\"/about/\">About</a></li>" +
-		"<li><a class=\"navlink\" href=\"/results/\">Results</a></li>" +
-		"<li><a class=\"navlink\" href=\"/services/\">Services</a></li>" +
-		"<li><a class=\"navlink\" href=\"/learning/\">Learning</a></li>" +
-		"</ul>";
-		document.write(h);
-	}
-
+}
