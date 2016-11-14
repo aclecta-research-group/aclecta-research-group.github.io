@@ -9,7 +9,8 @@
   list-style: none;
 }
 
-.navlink {
+.navlink,.navlink:link,.navlink:visited,.navlink:hover,.navlink:focus,.navlink:active{
+    color: inherit;
     text-decoration: none;
 }
 
