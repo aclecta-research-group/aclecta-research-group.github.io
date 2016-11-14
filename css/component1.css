@@ -318,10 +318,10 @@ header.sticky {
   vertical-align: baseline;
   position: fixed;
   width: 100%;
-  color: #A5C3DC;
-  font-size: 1.5em;
-  line-height: 1.5em;
-  height: 1.5em;
+  color: #fff;
+  font-size: 1em;
+  line-height: 1em;
+  height: 1em;
   background: #0079B7;
   text-align: left;
 }

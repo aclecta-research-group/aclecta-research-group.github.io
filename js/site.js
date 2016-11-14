@@ -23,7 +23,7 @@ function gMTL(fn,ln,dn){
 
 function renderFooter(){
 	var f = "<div class=\"component\">"+
-	"<button class=\"cn-button\" id=\"cn-button\">+</button>"+
+	"<button class=\"cn-button\" id=\"cn-button\">▲</button>"+
 	"<div class=\"cn-wrapper\" id=\"cn-wrapper\">"+
 	"<ul>"+
 	"<li><a href=\"https://www.linkedin.com/in/parrottsquawk\" target=\"_blank\"><span class=\"socicon-linkedin\" style=\"color:#3371b7;\"></span></a></li>"+
