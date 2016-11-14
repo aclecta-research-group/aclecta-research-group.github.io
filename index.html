@@ -14,10 +14,20 @@
 	function gMTL(fn,ln,dn){
 		return("mail" + "to:" + fn +"." + ln + "@" + dn + ".com");
 	}
+	function renderHeader(){
+		var h ="<ul class=\"nav\">" +
+		  "<li><a href=\"/\">Home</a></li>" +
+		  "<li><a href=\"/about/\">About</a></li>" +
+		  "<li><a href=\"/results/\">Results</a></li>" +
+		  "<li><a href=\"/clients/\">Clients</a></li>" +
+		  "<li><a href=\"/contact/\">Contact</a></li>" +
+		"</ul>";
+		document.write(h);
+	}
 	</script>
 </head>
 <body>
-	<header class="sticky"><h1>Sticky Header</h1></header>
+	<header class="sticky"><h1><script type="text/javascript">renderHeader()</script></h1></header>
 	<div class="container">
 		<div id=container>
 			<img class="centeredImage" src="img/arg_high.png">
