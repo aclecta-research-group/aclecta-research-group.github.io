@@ -27,8 +27,8 @@ function renderFooter(){
 	"<li><a href=\"http://stackoverflow.com/users/2783893/parrottsquawk\"><span class=\"socicon-stackoverflow\" style=\"color:#FD9827;\" target=\"_blank\"></span></a></li>"+
 	"</ul>"+
 	"</div>"+
-	"<div id=\"cn-overlay\" class=\"cn-overlay\"></div>"
-	"</div>"
+	"<div id=\"cn-overlay\" class=\"cn-overlay\"></div>"+
+	"</div>";
 	document.write(f);
 
 }
