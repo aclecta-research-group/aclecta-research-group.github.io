@@ -336,11 +336,11 @@ header.sticky {
 
 .nav{
     list-style:none;
-    margin: 0 10px;
     text-align:center;
 }
 .nav li{
     display:inline;
+    margin: 0 10px;
 }
 .nav a{
     display:inline-block;
