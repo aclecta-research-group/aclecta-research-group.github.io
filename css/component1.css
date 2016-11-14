@@ -318,12 +318,11 @@ header.sticky {
   position: fixed;
   width: 100%;
   color: #A5C3DC;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 2em;
+  line-height: 2em;
   height: 20px;
   background: #0079B7;
   text-align: left;
-  padding-left: 20px;
 }
 .centeredImage {
   position: absolute;
