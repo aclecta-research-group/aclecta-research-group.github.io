@@ -1,8 +1,8 @@
 (function(){
 
 	var button = document.getElementById('cn-button'),
-    wrapper = document.getElementById('cn-wrapper'),
-    overlay = document.getElementById('cn-overlay');
+	wrapper = document.getElementById('cn-wrapper'),
+	overlay = document.getElementById('cn-overlay');
 
 	//open and close menu when the button is clicked
 	var open = false;
@@ -17,37 +17,37 @@
 		if (!e) var e = window.event;
 	 	e.stopPropagation();//so that it doesn't trigger click event on document
 
-	  	if(!open){
-	    	openNav();
-	  	}
+	 	if(!open){
+	 		openNav();
+	 	}
 	 	else{
-	    	closeNav();
-	  	}
-	}
-	function openNav(){
-		open = true;
-	    button.innerHTML = "▼";
-	    classie.add(wrapper, 'opened-nav');
-	}
-	function closeNav(){
-		open = false;
-		button.innerHTML = "▲";
-		classie.remove(wrapper, 'opened-nav');
-	}
-	document.addEventListener('click', closeNav);
+	 		closeNav();
+	 	}
+	 }
+	 function openNav(){
+	 	open = true;
+	 	button.innerHTML = "▼";
+	 	classie.add(wrapper, 'opened-nav');
+	 }
+	 function closeNav(){
+	 	open = false;
+	 	button.innerHTML = "▲";
+	 	classie.remove(wrapper, 'opened-nav');
+	 }
+	 document.addEventListener('click', closeNav);
 
-})();
+	})();
 
-function gMTL(fn,ln,dn){
+	function gMTL(fn,ln,dn){
 		return("mail" + "to:" + fn +"." + ln + "@" + dn + ".com");
 	}
 	function renderHeader(){
 		var h ="<ul class=\"nav\">" +
-		  "<li><a class=\"navlink\" href=\"../\">Home</a></li>" +
-		  "<li><a class=\"navlink\" href=\"../about/\">About</a></li>" +
-		  "<li><a class=\"navlink\" href=\"../results/\">Results</a></li>" +
-		  "<li><a class=\"navlink\" href=\"../services/\">Services</a></li>" +
-		  "<li><a class=\"navlink\" href=\"../learning/\">Learning</a></li>" +
+		"<li><a class=\"navlink\" href=\"/\">Home</a></li>" +
+		"<li><a class=\"navlink\" href=\"/about/\">About</a></li>" +
+		"<li><a class=\"navlink\" href=\"/results/\">Results</a></li>" +
+		"<li><a class=\"navlink\" href=\"/services/\">Services</a></li>" +
+		"<li><a class=\"navlink\" href=\"/learning/\">Learning</a></li>" +
 		"</ul>";
 		document.write(h);
 	}
