@@ -318,9 +318,9 @@ header.sticky {
   position: fixed;
   width: 100%;
   color: #A5C3DC;
-  font-size: 2em;
-  line-height: 2em;
-  height: 2em;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  height: 1.5em;
   background: #0079B7;
   text-align: left;
 }
