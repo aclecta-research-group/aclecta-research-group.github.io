@@ -1,0 +1,59 @@
+(Author's Note: the following article is not intended to be professional or technical advice, but is an exploration of ways to protect one's interests in a world of corrupt and corruptible technology interfaces. Each user is ultimately responsible for the safe and secure operation of their own devices. Nothing in this article **should** interfere with normal business operations. However, there are exceptions to every rule. If you attempt the below procedures, please back up all files prior to commencement. The author is willing to assist in any way he can but assumes no liability or responsibility for the actions that a reader takes upon his or her own system.
+
+[Now that that the legalese is covered, this ideas in this article are less dangerous than hooking your computer up to the Internet. However, Murphy still rules the roost and has SU privileges at times.])
+
+Forests of trees connected by roots with encrypted passwords
+
+
+At the core of the Internet is a tree-like structure, where every computer connected to it answers to machines above it to send and receive information. Each machine has a numerical address for sending data up, down, and sideways through the branches of this tree.
+
+Using the old way of assigning addresses (IPv4), there are 4,228,250,625 possible addresses. That's 4.2 billion addresses. Keeping track of 4.2 billion addresses is mentally impossible. This is why God invented the rolodex and Satan invented the contacts list.
+
+Imagine for a moment where if you wanted to Google something you'd have to go to 8.8.8.8 and then run your Google search. (That doesn't work, by the way. It's a Google server, but the wrong server.) Or to go to Facebook, you'd have to go to 69.171.224.11 before you could read about how much your best frenemy hates your ex?
+
+Annoying even to think about, isn't it? Fortunately, some forward thinking engineers invented the DNS server (Domain Name Server) that will automatically translate "wikipedia.org" into 208.80.152.201 on your behalf, because you don't have time to look that nonsense up and "good encyclopedia for plagiarizing to write my thesis" is meaningless to every computer but IBM's Watson and Google's Search Engine.
+
+However, the Internet predates the DNS protocol. Prior to that, computers had to have a file known as "hosts". (Not "hosts.txt", "hosts.doc", or "hosts.htm". Just "hosts".) This hosts file worked to provide instructions to your computer and browser on where to go for certain details. This file is no longer required under most circumstances, but certain proxy and ISP protocols still use it from time to time. (Check with your ISP or network administrator if you're unsure.)
+
+Furthermore, because network software is usually backwards compatible, you can set up a hosts file to change the way your computer interacts with the Internet even if you don't need one. This hosts file is how we will tame the internet.
+
+
+Aliases aren't just for criminals
+
+One of my favorite things about computers is the ability to "alias" a great many things.  An alias is a way of creating typing shortcuts. Instead of typing "sudo apt-get update && sudo apt-get upgrade", I just type "upAll" and my computer knows that I really mean a much longer command. With the hosts file, you can create a series of Internet aliases. If you set a line that reads:
+
+74.125.127.105 g
+
+you have created an alias 'g' to use in the address bar of any browser on the computer. Typing a simple 'g' + <enter> in the address bar of IE or Chrome will now pull up https://www.google.com/.  This is because the computer checks its hosts file before sending a request to a DNS server. The IPv4 address (74.125.127.105) is what your computer needs to talk to Google and will look for it locally first.
+
+
+
+Likewise if you set "0.0.0.0 www.stealmyidentity.ru" in your hosts file, any attempt to go to the site "www.stealmyidentity.ru" from either the address bar or by clicking a link will cause your computer to check the hosts file and find the IPv4 address 0.0.0.0. Since 0.0.0.0 is also set to be your computer's IP address, it just redirects your browser back to the computer--so nothing happens. And although stealmyidentity.ru isn't a real website, it demonstrates the point much better than some other very real threats.
+
+
+It's a fact of life that hackers don't name their websites "stealmyidentity.com". However, "tomorrownewstoday(dot)com" doesn't seem so bad, right? Yet, the website is listed as a known host of malware--in particular, it attempts to steal your Facebook login. [I removed the dot so it doesn't appear as a clickable link on older browsers.]
+
+Click here to look at the hosts file I use. Alternatively, you can type out our own hosts file in the text editor of our choice. Lastly, you can graciously accept the help of a group of white hats over at http://someonewhocares.org/hosts/zero/ whose hard work and research are what introduced me to the subject. There you can find the original hosts file that I've modified for additional safety.
+
+[Editor's note: http://www.someonewhocares(dot)com is NOT the site we're linking to. The .COM version of someonewhocares is actually a malware site and is blocked by the hosts file discussed immediately above.]
+
+These hosts files have almost 13,000 websites that are "blocked" by redirection.
+
+Does this remove every risk to your PC?  No.  But it's a good first step.
+
+It also has the added benefit of speeding up your connection by reducing load times. Included in the list are every major web tracker, advertising server, and scripting host. By blocking these addresses, pages that attempt to load data from them have nothing to load. In fact, the system call to load them returns a response far faster than your Internet provider could ever hope to match. Likewise, if you're on a less than stellar network (such as my friends working on rigs and platforms in the Gulf of Mexico), latency should drop sharply because so much less garbage is being sent over the network.
+
+The someonewhocares version is less restrictive than what I use. If you use eBay or several other major websites, their version is much more suited than what's in my repository. Included in both files are comments, which are indicated by a # at the start of the line. If you ever want or need temporarily unblock a site, just put a # at the front of the line where its "alias" is found. Likewise, some number of addresses are marked with #. Those sites aren't blocked by hosts and you would need to delete the hashtag to successfully block them.
+
+Implementation on your computer is OS dependent. Instructions on where to place your hosts file are included in the comments for convenience. Please reach out to me with any questions. My contact info is below. Knowledge should be free, and I'm here to give it away.
+
+Alternatively, my bosses at Aclecta would be more than happy to send me your way to set up network security with a custom hosts file and other applicable methods.
+
+Either way, be safe. Stay smart.  And don't let the bad guys in Black Hats steal your data!
+
+
+
+
+Eric J. Falgout, Sr. Security Analyst for Aclecta Research Group, LLC.
+
+Email: eric.falgout@aclecta.com

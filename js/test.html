@@ -1,0 +1,40 @@
+<!DOCTYPE html> <html lang="en"> <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aclecta Research Group Homepage">
+<meta name="keywords" content="Aclecta, Big Data, Pentesting, Consulting, full stack software development">
+<meta name="author" content="Aclecta Research Group, LLC">
+
+<title>
+  aclecta
+</title>
+</head>
+<div >
+<ul id="blog_index">
+  <li>../md/test.md</li>
+  <li>../md/test copy.md</li>
+</ul>
+</div>
+
+<body>
+  <script src="jquery.min.js"></script>
+  <script src="toolkit.js"></script>
+  <script src="application.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () 
+    {
+        $("li").each(function() {
+          var item = $( this ).text();
+		  alert(item);
+		  $.get( item, function( data ) {
+			  $( ".result" ).html( data );
+			  alert( data );
+			});
+		});
+
+    })
+</script>
+  
+</body>
+</html>
