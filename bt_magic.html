@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aclecta Research Group Homepage">
+    <meta name="keywords" content="Aclecta, Big Data, Pentesting, Consulting, full stack software">
+    <meta name="author" content="Aclecta Research Group, LLC">
+
+    <title>
+
+        Aclecta Research Group, LLC. &middot;
+
+    </title>
+
+
+    <link href='https:/fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link href="../css/toolkit-startup.css" rel="stylesheet">
+    <link href="../css/application-startup.css" rel="stylesheet">
+
+
+
+
+    <style>
+        @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+            body {
+                width: 1px;
+                min-width: 100%;
+                *width: 100%;
+            }
+            #stage {
+                height: 1px;
+                overflow: auto;
+                min-height: 100vh;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        .textc {
+            color: #6c6f73 !important;
+        }
+
+        .left-padding {
+            padding-left: 5px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="stage" id="stage">
+
+        <div class="block block-inverse app-header" style="background-image: url(img/splash-01.png);">
+            <nav class="navbar navbar-transparent navbar-fixed-top navbar-padded app-navbar p-t-md">
+                <div class="container">
+
+                    <div class="navbar-header">
+                        <a href="index.html" class="navbar-left"><img style="height: 57px;" src="img/aclecta.png"></a>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                      </button>
+                    </div>
+
+                    <div class="navbar-collapse collapse text-uppercase" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li> <a href="index.html">Home</a> </li>
+                            <li> <a href="about/">About Us</a> </li>
+                            <li> <a href="learning/">Learning</a> </li>
+                            <li> <a href="results/">Results</a> </li>
+                            <li> <a href="services/">Services</a> </li>
+                            <li> <a href="mailto:operations@aclecta.com">Contact Us</a> </li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </nav>
+        </div>
+
+        <div class="block">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 left-padding">
+                    <h1 class="textc">Delving Deeper into the Bowels of Strategy Games</h1>
+                    <p class="textc">&nbsp;&nbsp;&nbsp;In our previous article, available <a href="http://www.aclecta.com/RT_Magic.html">here</a>,
+                        a comparison was drawn between Red Team/Blue Team exercises and Magic: the Gathering in the hopes
+                        of increasing the exercise's effectiveness. Probably the most important element discussed was the
+                        notion of the Metagame, the game outside the Game or the state of strategy that exists outside of
+                        any single match that dictates the card choices a highly skilled Magic player will make to increase
+                        his or her effectiveness against a random-but equally-skilled-opponent. The parallel that holds here
+                        is that an outside Red Team can conceivably predict weakness in the Blue Team's infrastructure based
+                        upon what is considered "out of bounds" for the sake of the exercise. If you haven't checked out
+                        the article and you're unfamiliar with the game, take a moment to read it before continuing. What
+                        follows below skips over the previous explanations and introduces a few more ideas.</p>
+                    <p class="textc">&nbsp;&nbsp;&nbsp;Combat in Magic, consists of "creatures" that are summoned from anywhere in the Multiverse
+                        to attack your opponent. Dragons make ferocious attackers, but take a while to deploy. Artifacts
+                        (magical machinery) can be deployed for a variety of reasons, from ramping up resource production
+                        (in order to get your Dragons out faster) to destroying your opponents creatures (to punish your
+                        opponent for spending so many resources on one dragon). Casting Fireballs at your opponents face
+                        will sometimes win games, but the same fireball directed at Eldritch Abomination might save you from
+                        having your face eaten off. All of these elements (and many more besides) work together to create
+                        a rich strategic environment, where analyzing your opponent's position is as crucial to victory as
+                        proper sequencing the deployment of your own assets.</p>
+                    <p class="textc">&nbsp;&nbsp;&nbsp;In Magic, it isn't wise to ignore your opponent and what he or she is trying to do
+                        to win. A "threat" is any card or combination of cards that if left unchecked will win the game.
+                        The "answer" to a threat is "removal", which is a card that takes the threat out of play. That dragon
+                        that was so fierce? Casting it straight into the pits of Hades renders it useless. That artifact
+                        that deals you 2 points of damage once per turn? If you disenchant it, it goes away.
+                    </p>
+                    <p class="textc">&nbsp;&nbsp;&nbsp;In the paper/rock/scissors of the Metagame, the most simplified breakdown consists
+                        of 3 archetypes: aggro, control, &amp; combo. Aggro, short for aggressive, is a deck that tries to
+                        eliminate the opponent before they can do anything meaningful–ending the game as quickly as possible
+                        in a full out assault. This type of deck packs few answers and instead focuses on presenting more
+                        threats, more quickly than any opponent can hope to answer them. Control is exactly what it sounds
+                        like. This type of deck seeks to utilize various types of resource advantage while denying the opponent
+                        the opportunity utilize resources committed to the board. Combo is short for "combination" and attempts
+                        to present some 2 or 3 card interaction that will use an in-game loop to generate infinite health,
+                        infinite damage, infinite spells, or some mix thereof. Historically, this type of deck is a glass
+                        cannon and loses if the opponent can prevent the cards from interacting as they should.</p>
+                    <p class="textc">&nbsp;&nbsp;&nbsp;As new players learn the various elements of strategy and begin to win more, it's a
+                        pretty typical experience for the player to see a significant increase in their win rate then shortly
+                        thereafter have a precipitous drop in win rate. The increase is due to a more thorough understanding
+                        of things like board state, resource conversion ratios, deck construction techniques, etc. The drop
+                        that occurs afterwards is because they don't yet see the next important lesson:</p>
+                    <h3 class="textc"><a id="There_are_wrong_answers_but_there_are_no_wrong_threats_12"></a>There are wrong answers, but there
+                        are no wrong threats.</h3>
+                    <p class="textc">&nbsp;&nbsp;&nbsp;If the opponent is presenting one major threat per turn, then the first time a threat
+                        goes unanswered the game is likely decided at that time. It may take several more turns for the win
+                        to be consolidated, but that fact is the battle that wins or loses the war. Addressing the previous
+                        paragraph, intermediate level players usually decide to make their decks more resourceful, less linear,
+                        and more capable of dealing with complex board states. All of these goals are worthy of pursuit.
+                        However, these intermediate players ignore what helped them to increase their win rate: unanswered
+                        threats win games, but answering threats only staves off a loss. That distinction is a very fine
+                        point that is easy to miss.</p>
+                    <p class="textc">That distinction is what separates the local weekend grinders from players on the verge of making the
+                        Pros.
+                    </p>
+                    <p class="textc">That distinction is why, in the typical Red Team/Blue Team exercise, the Red Team usually comes out on
+                        top.
+                    </p>
+                    <h3><a id="A_Moat_an_Archangel_with_a_flaming_sword_and_a_Black_Hat_Hacker_walk_into_a_bar_20"></a>A Moat,
+                        an Archangel with a flaming sword, and a Black Hat Hacker walk into a bar...</h3>
+                    <p class="textc">&nbsp;&nbsp;&nbsp;As they sit down, the Moat picks up his argument from earlier, saying to the Angel,
+                        "Sure, you can fly over me but I'm backed up by the solid walls of my castle, and the King's archer's
+                        can pick you off before you get close."<br> &nbsp;&nbsp;&nbsp;The Angel ponders this for a moment
+                        and says, "You're absolutely correct. But if I hit you 10 minutes before shift change, when the archers
+                        are all tired of standing watch and only thinking of going home to soft beds and beautiful wives,
+                        your deterrence rate will drop significantly. It is at that point, that the Hosts will descend. No
+                        static defense is impenetrable."<br> At this point, the Hacker looks up from his phone and starts
+                        laughing. The Moat and the Archangel both look at him like he's lost his mind. Eventually the Angel
+                        draws is sword and says, "Listen, fool. God may suffer foolishness, but I do not. What is the jest
+                        that drives your laughter?"<br> The Hacker stands up, drops a $20 on the bar, and says "This rounds
+                        on me. While you were busy theorycrafting tactics and countermeasures, I hacked both your email accounts,
+                        changed your passwords, and sent various orders in your names. The King's archers are on high alert
+                        for an incoming Angel assault, posted to every 2nd story window, parapet, and wall station in the
+                        city, while the dark elves are creeping up from below. Likewise, the Angels are amassing to attack
+                        for the mock exercise, but they're in the wrong city, on the wrong coast of the Kingdom.<br> &nbsp;&nbsp;&nbsp;"The
+                        moral here, boys? Don't let the game become the point of the game. If you hurry, you might make it
+                        to the capital before the invasion is over."<br> &nbsp;&nbsp;&nbsp;And with that, he disappeared
+                        into the darkness.</p>
+                    <p class="textc">&nbsp;&nbsp;&nbsp;To say that there are no wrong threats implies that all attacks are equally profitable.
+                        This implication is untrue, both in Red Team exercises and in real world black hat operations. Furthermore,
+                        the implication is unintended. What is intended is that perfect operational security is impossible.
+                        Computers suffer from the failures of their designers. Staff is limited by funding, availability,
+                        or even just experience with the problems at hand. Perhaps what needs to be explored is how the Blue
+                        Team can cease waiting behind a wall and a moat, and instead take proactive countermeasures–or even
+                        make reactive counterassaults that prey upon the weaknesses of the Red Team's strategy.</p>
+                    <p class="textc">&nbsp;&nbsp;&nbsp;How that might be implemented remains to be seen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="block block-inverse app-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 m-b-md">
+                        <ul class="list-unstyled list-spaced">
+                            <li class="m-b">
+                                <h6 class="text-uppercase">About</h6>
+                            </li>
+                            <li class="text-muted">
+                                If you've made it this far, you must certainly be on a mission. Contact us at any time by
+                                <a href="mailto: operations@aclecta.com"> email</a> with any questions.
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/toolkit.js"></script>
+
+</body>
+
+</html>
