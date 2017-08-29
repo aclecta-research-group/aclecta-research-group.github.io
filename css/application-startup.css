@@ -159,3 +159,12 @@
     align-items: center;
   }
 }
+
+
+.navbar-collapse {
+  background: RGBA(0,0,0,0.85);
+}
+
+.navbar-fixed-top {
+  position: static;
+}
