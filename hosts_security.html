@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Aclecta Research Group Homepage">
-    <meta name="keywords" content="Aclecta, Big Data, Pentesting, Consulting, full stack software">
+    <meta name="description" content="Aclecta Research Group article, hosts file, internet security">
+    <meta name="keywords" content="Aclecta, Big Data, Pentesting, Consulting, full stack software, hosts security, infosec article">
     <meta name="author" content="Aclecta Research Group, LLC">
 
     <title>
@@ -85,31 +85,29 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8 left-padding">
-                    <p class="textc">(Author's Note: the following article is not intended to be professional or technical advice, but is
+                    <p class="textc"><i>(Author's Note: the following article is not intended to be professional or technical advice, but is
                         an exploration of ways to protect one's interests in a world of corrupt and corruptible technology
                         interfaces. Each user is ultimately responsible for the safe and secure operation of their own devices.
                         Nothing in this article <strong>should</strong> interfere with normal business operations. However,
                         there are exceptions to every rule. If you attempt the below procedures, please back up all files
                         prior to commencement. The author is willing to assist in any way he can but assumes no liability
-                        or responsibility for the actions that a reader takes upon his or her own system.</p>
+                        or responsibility for the actions that a reader takes upon his or her own system.</i></p>
                     <p class="textc">[Now that that the legalese is covered, this ideas in this article are less dangerous than hooking your
-                        computer up to the Internet. However, Murphy still rules the roost and has SU privileges at times.])</p>
-                    <p class="textc">Forests of trees connected by roots with encrypted passwords</p>
-                    <p class="textc">At the core of the Internet is a tree-like structure, where every computer connected to it answers to
+                        computer up to the Internet. However, Murphy still rules the roost and has <a href="https://en.wikipedia.org/wiki/Sudo">SU privileges</a> at times.])</p>
+                    <h1>Forests of trees connected by roots with encrypted passwords</h1>
+                    <p class="textc">At the core of the Internet is a tree-like structure, where every connected computer answers to
                         machines above it to send and receive information. Each machine has a numerical address for sending
-                        data up, down, and sideways through the branches of this tree.</p>
+                        data up, down, and sideways through the branches, roots, and forks of this tree.</p>
                     <p class="textc">Using the old way of assigning addresses (IPv4), there are 4,228,250,625 possible addresses. That's 4.2
                         billion addresses. Keeping track of 4.2 billion addresses is mentally impossible. This is why God
                         invented the rolodex and Satan invented the contacts list.</p>
                     <p class="textc">Imagine for a moment where if you wanted to Google something you'd have to go to 8.8.8.8 and then run
                         your Google search. (That doesn't work, by the way. It's a Google server, but the wrong server.)
-                        Or to go to Facebook, you'd have to go to 69.171.224.11 before you could read about how much your
-                        best frenemy hates your ex?</p>
-                    <p class="textc">Annoying even to think about, isn't it? Fortunately, some forward thinking engineers invented the DNS
-                        server (Domain Name Server) that will automatically translate "<a href="http://wikipedia.org">wikipedia.org</a>"
-                        into 208.80.152.201 on your behalf, because you don't have time to look that nonsense up and "good
+                        Or before you could read about how much your best frenemy hates their ex on Facebook you'd have to remember 69.171.224.11?</p>
+                    <p class="textc">Annoying even to think about, isn't it? It's worse than having to remember phone numbers.  Fortunately, some forward thinking engineers invented the DNS server (Domain Name Server) that will automatically translate "<a href="http://wikipedia.org">wikipedia.org</a>"
+                        into 208.80.152.201 on your behalf (because, let's face it, you don't have time to remember that kind of nonsense and "good
                         encyclopedia for plagiarizing to write my thesis" is meaningless to every computer but IBM's Watson
-                        and Google's Search Engine.</p>
+                        and Google's Search Engine).</p>
                     <p class="textc">However, the Internet predates the DNS protocol. Prior to that, computers had to have a file known as
                         "hosts". (Not "hosts.txt", "hosts.doc", or "hosts.htm". Just "hosts".) This hosts file worked to
                         provide instructions to your computer and browser on where to go for certain details. This file is
@@ -118,12 +116,12 @@
                     <p class="textc">Furthermore, because network software is usually backwards compatible, you can set up a hosts file to
                         change the way your computer interacts with the Internet even if you don't need one. This hosts file
                         is how we will tame the internet.</p>
-                    <p class="textc">Aliases aren't just for criminals</p>
+                    <h2>Aliases aren't just for criminals</h2>
                     <p class="textc">One of my favorite things about computers is the ability to "alias" a great many things. An alias is
                         a way of creating typing shortcuts. Instead of typing "sudo apt-get update &amp;&amp; sudo apt-get
                         upgrade", I just type "upAll" and my computer knows that I really mean a much longer command. With
                         the hosts file, you can create a series of Internet aliases. If you set a line that reads:</p>
-                    <p class="textc">74.125.127.105 g</p>
+                    <code>74.125.127.105 g</code>
                     <p class="textc">you have created an alias ‘g' to use in the address bar of any browser on the computer. Typing a simple
                         ‘g' + &lt;enter&gt; in the address bar of IE or Chrome will now pull up <a href="https://www.google.com/">https://www.google.com/</a>.
                         This is because the computer checks its hosts file before sending a request to a DNS server. The
@@ -138,9 +136,9 @@
                         However, "tomorrownewstoday(dot)com" doesn't seem so bad, right? Yet, the website is listed as a
                         known host of malware–in particular, it attempts to steal your Facebook login. [I removed the dot
                         so it doesn't appear as a clickable link on older browsers.]</p>
-                    <p class="textc">Click here to look at the hosts file I use. Alternatively, you can type out our own hosts file in the
+                    <p class="textc"><a href="https://github.com/efalgout/white_hat_Eric/blob/master/hosts">Click here</a> to look at the hosts file I use. Alternatively, you can type out your own hosts file in the
                         text editor of our choice. Lastly, you can graciously accept the help of a group of white hats over
-                        at <a href="http://someonewhocares.org/hosts/zero/">http://someonewhocares.org/hosts/zero/</a> whose
+                        at <a href="http://someonewhocares.org/hosts/zero/">someonewhocares.org</a> whose
                         hard work and research are what introduced me to the subject. There you can find the original hosts
                         file that I've modified for additional safety.</p>
                     <p class="textc">[Editor's note: <a href="http://www.someonewhocares">http://www.someonewhocares</a>(dot)com is NOT the
@@ -158,16 +156,17 @@
                     </p>
                     <p class="textc">The someonewhocares version is less restrictive than what I use. If you use eBay or several other major
                         websites, their version is much more suited than what's in my repository. Included in both files
-                        are comments, which are indicated by a # at the start of the line. If you ever want or need temporarily
+                        are comments, which are indicated by a # at the start of the line. If you ever want or need to temporarily
                         unblock a site, just put a # at the front of the line where its "alias" is found. Likewise, some
                         number of addresses are marked with #. Those sites aren't blocked by hosts and you would need to
                         delete the hashtag to successfully block them.</p>
-                    <p class="textc">Implementation on your computer is OS dependent. Instructions on where to place your hosts file are included
-                        in the comments for convenience. Please reach out to me with any questions. My contact info is below.
+                    <p class="textc">Implementation on your computer is OS dependent. Please reach out to me with any questions. My contact info is below.
                         Knowledge should be free, and I'm here to give it away.</p>
                     <p class="textc">Alternatively, my bosses at Aclecta would be more than happy to send me your way to set up network security
                         with a custom hosts file and other applicable methods.</p>
                     <p class="textc">Either way, be safe. Stay smart. And don't let the bad guys in Black Hats steal your data!</p>
+                  </br>
+                </br>
                     <p class="textc">Eric J. Falgout, Sr. Security Analyst for Aclecta Research Group, LLC.</p>
                     <p class="textc">Email: <a href="mailto:eric.falgout@aclecta.com">eric.falgout@aclecta.com</a></p>
                 </div>
@@ -180,7 +179,7 @@
                     <div class="col-sm-5 m-b-md">
                         <ul class="list-unstyled list-spaced">
                             <li class="m-b">
-                                <h6 class="text-uppercase">About</h6>
+                                <h6 class="text-uppercase"><a href="https://www.aclecta.com/about/">About</a></h6>
                             </li>
                             <li class="text-muted">
                                 If you've made it this far, you must certainly be on a mission. Contact us at any time by
